@@ -1,0 +1,26 @@
+$breakpoints: (
+  xs: 0,
+  sm: 35.5rem,
+  md: 48rem,
+  lg: 64rem,
+  xl: 80rem
+) !default;
+
+@function breakpoint-value($breakpoint) {
+  @return map-get($breakpoints, $breakpoint);
+}
+
+@function breakpoint-infix($breakpoint) {
+  @return if(breakpoint-value($breakpoint) == 0, "", "-#{$breakpoint}");
+}
+
+@mixin media-breakpoint($breakpoint) {
+  $min: breakpoint-value($breakpoint);
+  @if $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

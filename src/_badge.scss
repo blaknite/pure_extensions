@@ -1,0 +1,44 @@
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  line-height: 1em;
+  margin-bottom: -1em;
+  font-size: 75%;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.2em;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  &:empty {
+    display: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  &.badge-success {
+    background-color: #2bbc43;
+  }
+
+  &.badge-info {
+    background-color: #59abff;
+  }
+
+  &.badge-warning {
+    background-color: #f4ae3d;
+  }
+
+  &.badge-danger {
+    background-color: #dc3d4d;
+  }
+}
+
+// Quick fix for badges in buttons
+.pure-button .badge {
+  position: relative;
+  top: -1px;
+}

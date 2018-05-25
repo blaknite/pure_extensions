@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+cd "$(dirname "$0")/.."
+
+bundle exec sass --style expanded --sourcemap=none src/_all.scss dist/pure_extensions.css
+bundle exec sass --style compressed --sourcemap=none src/_all.scss dist/pure_extensions.min.css

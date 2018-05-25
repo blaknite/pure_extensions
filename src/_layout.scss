@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.panel {
+  margin-bottom: 2rem;
+}
+
+@include media-breakpoint("lg") {
+  .container {
+    max-width: breakpoint-value("lg");
+  }
+}
+
+@include media-breakpoint("xl") {
+  .container {
+    max-width: breakpoint-value("xl");
+  }
+}

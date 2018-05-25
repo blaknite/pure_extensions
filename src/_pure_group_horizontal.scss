@@ -1,0 +1,38 @@
+.pure-form {
+  .pure-group-horizontal {
+    display: flex;
+
+    input,
+    textarea,
+    select {
+      flex-grow: 1;
+    }
+
+    input,
+    textarea,
+    select,
+    .pure-input-addon {
+      & + input,
+      & + textarea {
+        border-top-color: #cccccc !important;
+        &:not(:focus) {
+          border-left-color: transparent !important;
+        }
+      }
+
+      & + .pure-input-addon {
+        border-left-color: transparent !important;
+      }
+    }
+
+    .pure-button {
+      margin: 0;
+    }
+  }
+
+  .pure-input-addon {
+    padding: 0.5em 1em;
+    background-color: #E6E6E6;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}

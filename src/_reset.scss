@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  ol, ul {
+    margin-bottom: 0;
+  }
+}
+
+pre {
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: #0078e7;
+  text-decoration: none;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  &:hover {
+    color: darken(#0078e7, 10%);
+    text-decoration: underline;
+  }
+
+  .pure-menu &:hover {
+    text-decoration: none;
+  }
+
+  &.pure-button:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #cccccc;
+  height: 1px;
+  box-sizing: border-box;
+  margin: 1em 0;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.pure-button,
+.pure-button[disabled] {
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pure-button .fa {
+  margin-left: -3px;
+  margin-right: 3px;
+  position: relative;
+  top: -1px;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
+}
+
+.pure-form {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.pure-form input[type]:not(input[type=checkbox], input[type=radio]),
+.pure-form textarea,
+.pure-form select {
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  background: white;
+  border: 1px solid #cccccc;
+  padding: 0.5em 0.6em;
+
+  &:focus {
+    border-color: #cccccc;
+    border-left: 3px solid #0078e7;
+    padding-left: calc(0.6em - 2px);
+  }
+
+  &.pure-input-rounded {
+    border-radius: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pure-form input[type]:not(input[type=checkbox], input[type=radio]),
+  .pure-form textarea,
+  .pure-form select {
+    width: 100% !important;
+  }
+}
+
+.pure-form .pure-group {
+  input,
+  textarea,
+  select {
+    top: auto;
+
+    &:first-child,
+    &:last-child,
+    &:first-child:last-child {
+      border-radius: 0;
+      top: auto;
+    }
+
+    & + input,
+    & + textarea {
+      border-top-color: transparent !important;
+    }
+  }
+}
+
+.pure-form-aligned .pure-controls {
+  margin-top: 1.5em;
+  margin-left: 0;
+}
+
+@media (min-width: 480px) {
+  .pure-form-aligned .pure-controls {
+    margin-left: 12em;
+  }
+}
+
+.pure-form-aligned .pure-control-group label {
+  text-align: left;
+  width: auto;
+  margin: 0.25em 0;
+}
+.pure-form-aligned .input-wrapper {
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .pure-form-aligned .pure-control-group label {
+    float: left;
+    line-height: 2.3em;
+    width: 11em;
+    text-align: right;
+    margin: 0 1em 0 0;
+  }
+  .pure-form-aligned .input-wrapper {
+    margin-left: 12em;
+  }
+}
+
+.pure-form .pure-form-message {
+  margin-bottom: 0.5em;
+}
+
+.pure-form .pure-control-group.control-group-with-error {
+  .pure-form input[type]:not(input[type=checkbox], input[type=radio]),
+  .pure-form textarea,
+  .pure-form select {
+    color: #b94a48;
+    border-color: #ee5f5b;
+  }
+
+  .pure-form-message {
+    color: #b94a48;
+  }
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #888888;
+}
+
+.pure-g,
+.pure-g [class*="pure-u"] {
+  font-family: inherit;
+}
